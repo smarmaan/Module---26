@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delegation</title>
+</head>
+
+<body>
+    <h1>Recap Delegation...</h1>
+
+    <section>
+        <ul class="list-container" id="container">
+            <li class="item">Lorem, ipsum dolor.</li>
+            <li class="item">Eveniet, dolores temporibus!</li>
+            <li class="item">Beatae, cum error.</li>
+            <li class="item">Praesentium, ducimus aliquid.</li>
+            <li class="item">Aut, consectetur eligendi!</li>
+            <li class="item">Nemo, labore enim?</li>
+        </ul>
+
+
+        <button id="add-btn">Add Items</button>
+    </section>
+
+
+    <script>
+
+        document.getElementById("add-btn").addEventListener("click", function () {
+
+            const listContainer = document.getElementsByClassName("list-container")
+            const li = document.createElement('li')
+            li.innerText = "Hi amigos"
+            document.getElementById("container").appendChild(li)
+        })
+
+
+        const containerList = document.getElementById("container")
+        containerList.addEventListener("click", function (event) {
+            event.target.parentNode.removeChild(event.target)
+            // console.log(event.target.parentNode);
+        })
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

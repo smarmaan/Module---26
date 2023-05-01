@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble</title>
+</head>
+
+<body>
+    <h1>Explore event Bubble.</h1>
+
+    <section>
+        <ul id="list-container">
+            <li id="item-1" class="item">Lorem, ipsum dolor.</li>
+            <li id="item-2" class="item">Qui, sapiente distinctio.</li>
+            <li id="item-3" class="item">Repellendus, eos nemo?</li>
+            <li id="item-4" class="item">In, fuga. Accusantium?</li>
+            <li id="item-5" class="item">Repellat, animi voluptates?</li>
+            <li id="item-6" class="item">Maiores, incidunt consequuntur.</li>
+        </ul>
+
+
+        <button id="add-btn">Add Item</button>
+
+
+    </section>
+
+
+
+
+    <script>
+
+        // const items = document.getElementsByClassName("item")
+        // for (const item of items) {
+        //     item.addEventListener("click", function () {
+        //         event.target.parentNode.removeChild(event.target)
+        //     })
+        // }
+
+
+        const listContainer = document.getElementById("list-container")
+        listContainer.addEventListener("click", function () {
+            event.target.parentNode.removeChild(event.target)
+        })
+
+
+        document.getElementById("add-btn").addEventListener("click", function () {
+            const listContainer = document.getElementById("list-container");
+
+            const li = document.createElement('li')
+            li.innerText = "brand new item"
+            li.classList.add('item')
+            listContainer.appendChild(li)
+
+        })
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
